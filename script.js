@@ -1,3 +1,8 @@
+if (localStorage.getItem("mode") == "1") {
+    document.body.id = "light";
+} else {
+    document.body.id = "";
+}
 function randomGenerate() {
     let name = document.getElementById("name").value;
     let length = document.getElementsByTagName("span").length;
@@ -36,8 +41,10 @@ function pause() {
 }
 function mode(n) {
     if (n == 1) {
+        localStorage.setItem("mode", "1");
         document.body.id = "light";
     } else {
+        localStorage.setItem("mode", "2");
         document.body.id = "";
     }
 }

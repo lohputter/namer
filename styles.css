@@ -11,7 +11,7 @@ nav {
     background-color: black;
     color: white;
     padding: 25px 50px;
-    width: 90%;
+    width: calc(100% - 100px);
 }
 nav a {
     text-decoration: none;
@@ -41,8 +41,19 @@ input {
     font-size: 20px;
     height: 40px;
     margin: 5% 0;
+    padding: 0 5px;
     border-radius: 5px;
     width: 90%;
+}
+#special {
+    position: relative;
+}
+#arrow {
+    border: 10px solid transparent;
+    border-bottom-color: white;
+    position: absolute; 
+    left: 75px;
+    top: 25%;
 }
 button {
     background-color: #2d2e2e;
@@ -86,6 +97,12 @@ button:hover {
     cursor: pointer;
     font-weight: bold;
 }
+#light #settings span {
+    border-bottom: 1.5px dotted black;
+}
+#light #settings span:hover {
+    text-shadow: 2px 2px 5px black;
+}
 #light {
     background-color: white;
 }
@@ -93,6 +110,19 @@ button:hover {
     border: 1px solid black;
     color: black;
     box-shadow: 2px 2px 5px #262626;
+}
+#light input {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+#light button {
+    background-color: white;
+    color: black;
+    box-shadow: 5px 5px #262626;
+}
+#light #styled {
+    color: black;
 }
 @keyframes square {
     25% {left: calc(100% - 5px); top: 5px;}
