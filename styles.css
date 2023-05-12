@@ -33,6 +33,9 @@ main div:not(#styled, #buttons) {
     color: white;
     padding: 5%;
 }
+i {
+    background-color: white;
+}
 input {
     border: none;
     background-color: #2d2e2e;
@@ -47,13 +50,6 @@ input {
 }
 #special {
     position: relative;
-}
-#arrow {
-    border: 10px solid transparent;
-    border-bottom-color: white;
-    position: absolute; 
-    left: 75px;
-    top: 25%;
 }
 button {
     background-color: #2d2e2e;
@@ -154,10 +150,20 @@ button:hover {
     90% {left: 45%; top: calc(5px + 40%)}
     100% {left: 45%; top: 50%}
 }
-@keyframes circle {
+@keyframes diamond {
     0% {left: calc(50% - 5px); top: 5px; transform: rotate(90deg)}
     25% {left: calc(100% - 5px); top: calc(50% - 5px); transform: rotate(180deg)}
     50% {left: calc(50% - 5px); top: calc(100% - 5px); transform: rotate(270deg)}
     75% {left: 5px; top: calc(50% - 5px); transform: rotate(360deg)}
     100% {left: calc(50% - 5px); top: 5px; transform: rotate(90deg)}
 }
+@keyframes circle {
+    0% {left: 50%; top: 0%;}
+    25% {left: 100%; top: 50%}
+    50% {left: 50%; top: 100%}
+    75% {left: 0%; top: 50%}
+    100% {left: 50%; top: 0%;}
+}
+/* 
+
+*/

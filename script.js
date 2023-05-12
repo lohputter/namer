@@ -3,15 +3,21 @@ if (localStorage.getItem("mode") == "1") {
 } else {
     document.body.id = "";
 }
-function randomGenerate() {
+function randomGenerate(n) {
     let name = document.getElementById("name").value;
     let length = document.getElementsByTagName("span").length;
-    let animations = ["square", "wave", "rainbow", "snake", "circle"];
+    let animations = ["square", "wave", "rainbow", "snake", "diamond", "circle"];
     let animation = animations[Math.floor(Math.random() * animations.length)];
-    let cooldowns = [1, 2, 2, 2, 2];
+    if (n != 0) {
+        animation = animations[n-1];
+    }
+    let cooldowns = [1, 2, 2, 2, 2, 2];
     let cooldown = cooldowns[animations.indexOf(animation)];
     for (let i=0; i<length; i++) {
         document.getElementsByTagName("span")[0].remove();
+    }
+    if (animation == "circle") {
+        
     }
     if (document.getElementsByTagName("span").length == 0) {
         for (let i=0; i<name.length; i++) {
