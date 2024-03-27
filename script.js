@@ -6,18 +6,15 @@ if (localStorage.getItem("mode") == "1") {
 function randomGenerate(n) {
     let name = document.getElementById("name").value;
     let length = document.getElementsByTagName("span").length;
-    let animations = ["square", "wave", "rainbow", "snake", "diamond", "circle"];
+    let animations = ["square", "wave", "rainbow", "snake", "diamond"];
     let animation = animations[Math.floor(Math.random() * animations.length)];
     if (n != 0) {
         animation = animations[n-1];
     }
-    let cooldowns = [1, 2, 2, 2, 2, 2];
+    let cooldowns = [1, 2, 2, 2, 2];
     let cooldown = cooldowns[animations.indexOf(animation)];
     for (let i=0; i<length; i++) {
         document.getElementsByTagName("span")[0].remove();
-    }
-    if (animation == "circle") {
-        
     }
     if (document.getElementsByTagName("span").length == 0) {
         for (let i=0; i<name.length; i++) {
